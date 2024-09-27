@@ -24,13 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    // Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
-    // Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
     
     Route::get('/settings/users', [UsersController::class, 'index'])->name('users');
-    // Route::get('/settings/users', function () {
-    //     return view('pages/settings/account');
-    // })->name('account');
 
     Route::get('/messages', function () {
         return view('pages/messages');
